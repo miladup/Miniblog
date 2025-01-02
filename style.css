@@ -1,0 +1,792 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c; 
+    color: #f0f0f0; 
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 45px;
+}
+
+/* pdp */
+.pdp {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pdp-40 {
+    width: 40px;
+    height: 40px;
+}
+
+.pdp-150 {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.pdp-70 {
+    width: 70px;
+    height: 70px;
+}
+
+/* Formulaire */
+/* Conteneur principal du formulaire */
+.form {
+    background: #2a2a2a;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+
+    /* Centrage vertical et horizontal */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Légende */
+.form-legend {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #d1d1d1;
+    text-align: center;
+}
+
+/* Groupe de formulaire */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Champ d'entrée */
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #1c1c1c;
+    color: #d1d1d1;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: #d1d1d1;
+    box-shadow: 0 0 4px #d1d1d1;
+}
+
+/* Label */
+.form-label {
+    position: absolute;
+    border-radius: 4px;
+    top: 1rem;
+    left: 0.75rem;
+    background: #1c1c1c;
+    padding-inline: 0.3em;
+    color: #bfbfbf;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translateY(calc(-100% - 0.5rem));
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}
+
+/* Boutons */
+.form-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #444;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.form-button:hover {
+    background: #555555;
+    color: #ffffff;
+}
+
+/* Icône de l'œil */
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.eye-icon img {
+    width: 23px;
+    padding-top: 5px;
+}
+
+  
+a {
+    color: #bfbfbf; 
+}
+
+span {
+    color:#d1d1d1;
+}
+
+/* Styles de la barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; 
+    background-color: #2a2a2a; 
+    padding: 0.8rem;
+}
+
+.navbar-center {
+    display: flex;
+    gap: 2rem; 
+}
+
+.navbar-right {
+    position: absolute; 
+    right: 1rem; 
+    display: flex;
+    gap: 2rem; 
+    top: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f0f0f0; 
+    font-size: 1.05rem;
+    padding: 0.6rem 1rem; 
+    border-radius: 6px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #393939; 
+    color: #ffffff; 
+}
+
+/* Conteneur des posts */
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    padding-top: 0.5rem;
+}
+
+/* Style des cartes de post */
+.post-card {
+    background: #2a2a2a; 
+    color: #f0f0f0; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 800px;
+    padding: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Supprimer l'effet de translation au hover */
+.post-card:hover {
+    transform: none; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+}
+
+/* Boutons du post */
+.post-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.post-buttons button {
+    width: auto;
+    padding: 0.5rem 1rem;
+    background: #444; 
+    color: #f0f0f0; 
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.post-buttons button:hover {
+    background: #555555;
+    color: #ffffff; 
+}
+
+.posts-title {
+    margin-top: 32px;
+    margin-bottom: 15px;
+}
+
+.posts-heading {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Style des titres */
+.post-display h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #d1d1d1;
+}
+
+/* Style des textes */
+.post-display p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Style des dates */
+.post-display small {
+    font-size: 0.9rem;
+    color: #bfbfbf; 
+}
+
+/* Bouton afficher les commentaires */
+.comments-toggle-button {
+    padding: 0.5rem 1rem;
+    background: #444;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.comments-toggle-button:hover {
+    background: #555555;
+    color: #ffffff;
+}
+
+/* Section des commentaires */
+
+.post-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: normal; 
+}
+
+.comment-add-button {
+    background: #444; 
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px; 
+    font-size: 0.85rem; 
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background: #555555; 
+    color: #ffffff; 
+}
+
+form[style="display: inline;"] button {
+    margin-bottom: 0;
+}
+
+.mb {
+    margin-bottom: 0;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.comment-buttons button {
+    background: #444; 
+    color: #f0f0f0; 
+    border: none;
+    border-radius: 8px; 
+    font-size: 0.85rem; 
+    padding: 0.4rem 0.8rem; 
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.comment-buttons button:hover {
+    background: #555555; 
+    color: #ffffff;
+}
+
+.comment-buttons {
+    display: flex;
+    gap: 0.5rem; 
+    margin-top: 0.5rem; 
+}
+
+.comment-add-button {
+    margin-top: 15px;
+}
+
+.comment img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.comment-display {
+    margin-bottom: 0;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comment-info strong {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}
+
+.comment-info small {
+    font-size: 0.8rem;
+    color: #bfbfbf;
+}
+
+.comment-content {
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.comment-buttons button {
+    margin: 0;
+}
+
+/* Applique aux textes des commentaires */
+.comment-display p,
+.post-display p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; 
+    overflow: hidden;
+}
+
+/* Ajout pour les titres si le problème est également présent */
+.post-display h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+}
+
+textarea {
+    width: 100%; 
+    max-width: 600px; 
+    padding: 10px; 
+    border: 1px solid #444; 
+    border-radius: 8px; 
+    background: #1c1c1c; 
+    color: #f0f0f0; 
+    font-size: 0.8rem; 
+    resize: none; 
+    outline: none; 
+}
+
+textarea:focus {
+    border-color: #d1d1d1; 
+    box-shadow: 0 0 4px #d1d1d1; 
+}
+
+/* Profil Container */
+.profile-container {
+    background: #2a2a2a; 
+    color: #f0f0f0; 
+    padding: 2rem;
+    padding-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Informations Utilisateur */
+.profile-info {
+    margin-bottom: 1.5rem;
+}
+
+.profile-info p {
+    margin: 0.5rem 0; 
+}
+
+/* Boutons */
+.profile-buttons button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #444;
+    color: #f0f0f0; 
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.profile-buttons button:hover {
+    background: #555555; 
+}
+
+.profile-edit-form {
+    background: #2a2a2a; 
+    color: #ffffff; 
+    padding: 2rem;
+    padding-top: 55px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 120px;
+    text-align: left;
+    position: relative;
+}
+
+.profile-edit-form label {
+    display: block;
+    font-size: 1rem;
+    color: #bfbfbf;
+}
+
+.profile-edit-form input[type="text"],
+.profile-edit-form input[type="file"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+    border: 1px solid #444; 
+    border-radius: 8px;
+    background: #1c1c1c; 
+    color: #f0f0f0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.profile-edit-form input[type="text"]:focus,
+.profile-edit-form input[type="file"]:focus {
+    border-color: #d1d1d1; 
+    box-shadow: 0 0 4px #d1d1d1;
+}
+
+.profile-edit-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #444; 
+    color: #f0f0f0; 
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.profile-edit-form button:hover {
+    background: #555555; 
+}
+
+/* Ajustement spécifique pour aligner tout */
+.profile-edit-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.profile-edit-form .form-group label {
+    margin-bottom: 0.5rem;
+}
+
+.photo {
+    color: #f0f0f0 !important;
+}
+
+/* Liste des utilisateurs */
+.user-display {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    width: 800px;
+    margin: auto;
+}
+
+/* Photo de profil */
+.user-display img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Informations utilisateur */
+.user-display p {
+    margin: 0.5rem 0;
+    color: #bfbfbf;
+    font-size: 1rem;
+}
+
+/* Boutons d'action */
+.user-display button {
+    padding: 0.5rem 1rem;
+    background: #444;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-left: auto;
+    width: 110px;
+}
+
+.user-display button:hover {
+    background: #555555;
+}
+
+/* Formulaire de modification utilisateur */
+.user-edit {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.user-edit p {
+    margin: 0.5rem 0;
+    color: #bfbfbf;
+    font-size: 1rem;
+}
+
+.user-edit label {
+    display: block;
+    font-size: 1rem;
+    color: #bfbfbf;
+}
+
+.user-edit input[type="text"],
+.user-edit input[type="file"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #1c1c1c;
+    color: #f0f0f0;
+    font-size: 1rem;
+}
+
+.user-edit input[type="text"]:focus,
+.user-edit input[type="file"]:focus {
+    border-color: #d1d1d1;
+    box-shadow: 0 0 4px #d1d1d1;
+}
+
+button input[type="file"] {
+    background-color: #1c1c1c;
+}
+
+.user-edit button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #444;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.user-edit button:hover {
+    background: #555555;
+}
+
+/* Centrage global pour toute la liste */
+ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #bfbfbf;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #1c1c1c;
+    color: #f0f0f0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #d1d1d1;
+    box-shadow: 0 0 4px #d1d1d1;
+}
+
+/* Boutons du formulaire */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.action-button {
+    background: #444;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.action-button:hover {
+    background: #555555;
+    color: #ffffff;
+}
+
+.navbar a.active {
+    background-color: #393939; 
+    color: #ffffff;
+}
+
+.button-mb {
+    margin-bottom: 1.4rem;;
+}
+
+/* Styliser le bouton natif pour les navigateurs récents */
+input[type="file"]::file-selector-button {
+    background-color: #444; 
+    color: #f0f0f0; 
+    border: none;
+    border-radius: 8px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #555555; 
+}
+
+/* Pour les anciens navigateurs (Chrome/Safari/Webkit) */
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #444;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #555555;
+}
+
+.footer {
+    background-color: #2a2a2a; 
+    color: #f0f0f0;
+    text-align: center; 
+    width: 100%;
+    padding: 1.4rem;
+    margin-top: auto; 
+}
+
+.footer p {
+    margin: 0; 
+    font-size: 0.95rem; 
+    color: #bfbfbf; 
+}
+
+/* Conteneur principal pour organiser la page */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* La partie principale prend l'espace disponible */
+.content {
+    flex: 1; 
+}
